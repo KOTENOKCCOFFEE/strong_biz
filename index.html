@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управление задачами и поощрениями сотрудников</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icon/moneta_7l5gwqebu4ln.ico" type="image/x-icon">
+  <script src="js/app.js"></script>
+  <div id="notification" class="notification"></div>
+
+</head>
+<body>
+<header class="hero">
+  <div class="hero-content">
+    <h1>Модуль для управления задачами и поощрениями сотрудников</h1>
+    <p>Автоматизация управления производительностью с элементами геймификации</p>
+  </div>
+</header>
+
+
+<section class="subscription">
+  <h2>Следите за новостями проекта</h2>
+  <p>Введите вашу почту, чтобы подписаться на уведомления о развитии проекта.</p>
+  <input type="email" id="emailInput" placeholder="Введите ваш email" required>
+  <div id="subscriptionMessage"></div><br>
+  <button id="subscribeButton" class="cta-button"><img src="img/podpisatsya_9m9s2k5duq47_32.png"> </button>
+</section>
+
+<section class="subscription-options">
+  <h2>Подписка на использование проекта</h2>
+  <button id="subscribeOptionsButton" class="cta-button">Подписка</button>
+</section>
+
+
+<div id="subscribeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeSubscribeModal">&times;</span>
+
+
+    <div id="step1">
+      <h2>Выберите действие</h2>
+      <button id="subscribeNewButton" class="cta-button">Оформить подписку</button>
+      <button id="renewSubscriptionButton" class="cta-button">Продлить подписку</button>
+    </div>
+
+
+    <div id="step2-subscribe" class="modal-step" style="display:none;">
+      <h3>Оформить подписку</h3>
+      <label for="subscriptionMonths">Выберите срок (месяцев):</label>
+      <input type="range" id="subscriptionMonths" min="1" max="12" value="6">
+      <span id="monthDisplay">6</span> месяцев
+      <br><br>
+      <label for="phoneInput">Введите номер телефона:</label>
+      <input type="tel" id="phoneInput" placeholder="Введите номер телефона" required>
+      <button id="nextToSummaryFromSubscribe" class="cta-button">Далее</button>
+    </div>
+
+
+    <div id="step2-renew" class="modal-step" style="display:none;">
+      <h3>Продлить подписку</h3>
+      <label for="phoneRenewInput">Введите номер телефона:</label>
+      <input type="tel" id="phoneRenewInput" placeholder="Введите номер телефона" required>
+      <button id="nextToSummaryFromRenew" class="cta-button">Далее</button>
+    </div>
+
+
+    <div id="step3-summary" class="modal-step" style="display:none;">
+      <h3>Подтверждение</h3>
+      <p id="summaryText"></p>
+      <button id="confirmSubscription" class="cta-button">Подтвердить подписку</button>
+    </div>
+
+    <div id="modalResultMessage"></div>
+  </div>
+</div>
+
+<section class="features">
+  <h2>Основные возможности</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <h3>Централизованное управление задачами</h3>
+      <p>Создавайте задачи и следите за их выполнением в одном месте.</p>
+    </div>
+    <div class="card">
+      <h3>Геймификация</h3>
+      <p>Вознаграждайте сотрудников за выполнение задач с помощью системы "звезд".</p>
+    </div>
+    <div class="card">
+      <h3>Отслеживание целей</h3>
+      <p>Устанавливайте цели и контролируйте прогресс их выполнения.</p>
+    </div>
+    <div id="emailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeEmailModal">&times;</span>
+        <h2>Введите вашу почту</h2>
+        <input type="email" id="emailInputSimple" placeholder="Введите ваш email" required><br><br>
+
+        <button id="sendEmailButton" class="cta-button">Отправить</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Генерация отчетов</h3>
+      <p>Получайте автоматические отчеты о выполненных задачах.</p>
+    </div>
+  </div>
+  <button class="cta-button" id="downloadAppButton">Скачать</button>
+</section>
+
+<footer>
+
+  <p>Контакты:</p>
+  <div class="social-icons">
+    <a href="https://vk.com/d_a_n_i_s_s_i_m_a"><img src="img/VK.png" alt="VK"></a>
+    <p>Почта: kotenokminer@gmail.com</p>
+  </div>
+  <p>&copy; 2024 Разработано danissima для выпускной квалификационной работы</p>
+</footer>
+
+<img src="img/strictcat.png" alt="Cat working on computer" class="side-cat side-cat-left">
+<img src="img/stick1cat.png" alt="Cat working on computer" class="side-cat side-cat-right">
+<script src="js/app.js"></script>
+</body>
+</html>
